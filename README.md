@@ -92,3 +92,40 @@ La section « Le projet » utilise une mosaïque de photographies réelles. La p
 ### V11-1
 - Footer : rétablissement de la disposition verticale d’origine (Broadway au-dessus, logo ACA en dessous), tout en conservant le lien vers l’accueil.
 - Modalités : ajout d’un bouton « Voir la page auditions » sous le bouton du règlement complet.
+
+
+## V11-2
+- Création de la page `/auditions/materiaux/` (structure de préparation).
+- Activation des liens vers les matériaux depuis la page Auditions, Modalités et la confirmation de candidature.
+- Les fichiers de guide, partitions et pistes audio restent à intégrer avant publication définitive.
+
+
+## V11-3 — matériaux de préparation
+- Refonte de `/auditions/materiaux/` : hero simplifié, CTA d’ancrage, étapes intégrées aux grands titres.
+- Structure de fichiers prévue pour chaque morceau : partition PDF, paroles seules PDF, piano + voix MIDI MP3, piano seul/accompagnement MP3, interprétation de référence MP3.
+- Organisation des solos par voix féminines / voix masculines, avec deux propositions par type de voix.
+- Retrait des accès publics aux matériaux depuis `/auditions/` et `/auditions/modalites/`; accès conservé après candidature.
+- Page matériaux marquée `noindex,nofollow` en attendant la mise en place de la protection d’accès.
+
+
+### V11-4
+- Relecture de la page /auditions/materiaux/.
+- Étapes simplifiées en ÉTAPE 1 / 2 / 3, sans tiret, avec repère doré.
+- Clarification des textes et de la hiérarchie des ressources.
+- Remplacement de « MIDI » par « voix repères ».
+- Séparation des supports en Documents et Pistes de travail.
+- Navigation finale allégée.
+
+
+### V11-5
+- Relecture complète des pages Auditions, Modalités et Matériaux.
+- Matériaux : hiérarchie renforcée, vrais titres des morceaux, ressources simplifiées, bloc juridique bordeaux et navigation finale séparée.
+- Auditions : accès aux matériaux clarifié après inscription, convocation reformulée, FAQ actualisée, CTA final rééquilibré.
+- Modalités : nom du projet insécable dans le hero et information de convocation rassurante sans délai fixe.
+- Formulaire : messages d’erreur différenciés, aides remplacées temporairement en cas d’erreur et acceptation juridique stabilisée sans décalage de mise en page.
+- Titres d’onglets harmonisés avec le séparateur ·.
+- Ajustements responsive avec priorité aux usages mobiles.
+
+
+### V11-6
+- Sur la page des modalités, « Broadway à Strasbourg » est désormais entièrement insécable dans le texte du hero.

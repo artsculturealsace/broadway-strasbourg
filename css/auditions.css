@@ -332,7 +332,7 @@
 }
 
 /* Preparation */
-.preparation-section { background: #0d0a0b; }
+.preparation-section { background: #0d0a0b; padding-top:clamp(68px,6vw,90px); padding-bottom:clamp(68px,6vw,90px); }
 .preparation-section::before,
 .process-section::before {
   content: "";
@@ -560,7 +560,7 @@
 /* Final CTA — only one page ending */
 .final-cta-section {
   position: relative;
-  padding: clamp(70px, 7.5vw, 104px) var(--pad);
+  padding: clamp(54px, 5.8vw, 78px) var(--pad);
   background: linear-gradient(110deg, #5d0e19 0 54%, #22080c 54.2% 100%);
 }
 .final-cta-inner {
@@ -577,7 +577,7 @@
   align-items: stretch;
   gap: 14px;
 }
-.secondary-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.secondary-actions { display: grid; grid-template-columns: 1fr; gap: 10px; }
 .secondary-actions .button { padding-inline: 14px; font-size: .63rem; }
 
 /* Responsive */
@@ -646,6 +646,7 @@
   .distribution-layout { gap: 28px; }
   .distribution-copy .distribution-emphasis { margin-top: 22px; padding-top: 20px; }
 
+  .preparation-section { padding-top:58px; padding-bottom:58px; }
   .preparation-heading { gap: 20px; }
   .prep-grid { grid-template-columns: 1fr; margin-top: 34px; }
   .prep-card { min-height: 0; padding: 25px 21px; gap: 18px; }
@@ -674,7 +675,7 @@
   .faq-list summary { padding: 21px 42px 21px 0; font-size: .96rem; }
   .faq-list details p { margin-right: 28px; font-size: .9rem; }
 
-  .final-cta-section { padding: 62px 20px 68px; }
+  .final-cta-section { padding: 52px 20px 56px; }
   .final-cta-inner { gap: 28px; }
   .final-cta-actions { width: 100%; }
   .final-cta-actions > .button { width: 100%; }

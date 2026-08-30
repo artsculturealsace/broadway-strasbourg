@@ -38,10 +38,14 @@
 .field input,.field select { min-height:52px; padding:0 14px; }
 .field textarea { resize:vertical; min-height:128px; padding:14px; line-height:1.55; }
 .field input:focus,.field select:focus,.field textarea:focus { border-color:rgba(239,181,77,.72); box-shadow:0 0 0 2px rgba(239,181,77,.08); }
-.field.has-error input,.field.has-error select,.field.has-error textarea,.field-group.has-error .choice-cards span,.recording-consent.has-error .choice-cards span,.check-line.has-error { border-color:rgba(225,93,93,.72); }
-.field-error { display:block; margin-top:1px; color:#ffb2b2; font-size:.74rem; font-weight:500; line-height:1.45; }
+.field.has-error input,.field.has-error select,.field.has-error textarea,.field-group.has-error .choice-cards span,.recording-consent.has-error .choice-cards span { border-color:rgba(225,93,93,.72); }
+.field.has-error > small:not(.field-error) { display:none; }
+.recording-consent.has-error > p { display:none; }
+.field-error { display:block; margin-top:1px; color:#ff9f9f; font-size:.75rem; font-weight:600; line-height:1.45; }
 .field-group > .field-error,.recording-consent > .field-error { margin-top:10px; }
-.check-line + .field-error { margin:-14px 0 0 31px; }
+.check-consent-group { min-width:0; }
+.check-consent-group > .field-error { margin:8px 0 0 31px; }
+.check-consent-group.has-error .check-line input { outline:1px solid rgba(225,93,93,.8); outline-offset:2px; }
 
 .field-group,.recording-consent { margin:0 0 26px; padding:0; border:0; }
 .field-group legend,.recording-consent legend { margin-bottom:13px; }
@@ -120,6 +124,8 @@
   .review-item,.review-item:nth-child(odd):not(.review-item-wide) { grid-column:1; border-right:0; border-bottom:1px solid rgba(255,255,255,.09); }
   .review-grid .review-item:nth-last-child(-n+2):not(.review-item-wide) { border-bottom:1px solid rgba(255,255,255,.09); }
   .review-grid .review-item:last-child { border-bottom:0; }
+  .check-line { gap:12px; font-size:.86rem; }
+  .check-consent-group > .field-error { margin-left:30px; }
   .form-navigation { flex-direction:column; align-items:stretch; gap:8px; }
   .form-next,.form-submit { order:1; width:100%; margin:0; justify-content:center; text-align:center; }
   .form-prev { order:2; align-self:flex-start; }

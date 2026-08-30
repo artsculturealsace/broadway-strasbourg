@@ -208,7 +208,7 @@
       const messages = {
         first_name:'Indique ton prénom.',
         last_name:'Indique ton nom.',
-        birth_date:'Indique ta date de naissance.',
+        birth_date:'Renseigne ta date de naissance pour continuer.',
         city:'Indique ta ville de résidence.',
         email:'Indique ton adresse e-mail.',
         phone:'Indique ton numéro de téléphone.',
@@ -222,7 +222,7 @@
     }
 
     if (name === 'birth_date' && value && !potentiallyEligibleInAuditionWindow(value)) {
-      setError(field, 'Les auditions sont ouvertes aux personnes âgées de 16 à 35 ans inclus.');
+      setError(field, 'L’âge indiqué ne permet pas de participer aux auditions (16–35 ans inclus).');
       return false;
     }
 
