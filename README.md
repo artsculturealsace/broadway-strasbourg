@@ -1,4 +1,6 @@
-# Broadway à Strasbourg — V8.5
+# Broadway à Strasbourg — V11-10
+
+Guide de préparation allégé : suppression des sections finales redondantes, intégration des informations pratiques dans les sections existantes, reformulation de la section sur les interprétations transposées et retour simple vers les matériaux.
 
 Version de travail locale, non publiée sur GitHub.
 
@@ -136,3 +138,30 @@ La section « Le projet » utilise une mosaïque de photographies réelles. La p
 - mise à jour du répertoire d’audition (alto et basse notamment) ;
 - bouton de l’écran de confirmation prêt à recevoir le lien d’accès personnel renvoyé par l’API ;
 - guide de préparation indiqué comme prochainement disponible.
+
+## V11-8 — Guide de préparation en page web
+- Ajout de `/auditions/guide/`, page statique mobile-first reprenant l’identité visuelle du site.
+- Guide public avec `noindex, follow`; aucun changement du Worker, de D1, R2 ou Cloudflare.
+- Bouton du guide sur `/auditions/materiaux/` activé et relié à la nouvelle page.
+- Lien « type de voix » de la page matériaux renvoie directement à la section correspondante du guide.
+
+## V11-9 — Relecture du guide
+- Suppression des surtitres redondants dans le hero et les sections du guide.
+- Sommaire conservé comme repère de navigation, avec libellés simplifiés.
+- Recalibrage des cartes « morceau commun » / « morceau solo » et des grands titres.
+- Parcours « autonome avec une partition » et « lis peu ou pas la musique » simplifiés.
+- Réécriture de la section sur les interprétations de référence : explication plus directe des transpositions et de la voix pouvant sonner « un peu bizarre ».
+- Section « type de voix » et informations du jour de l’audition resserrées.
+
+## V11-11 — Guide : finitions
+
+- « deux » mis en évidence et phrase d’introduction terminée par deux-points dans « Ce qu’il faut préparer ».
+- Zone finale « Retour aux matériaux » passée sur fond bordeaux.
+
+
+
+## V11-12 — Guide : sommaire supprimé
+
+- Suppression du sommaire en haut du guide de préparation.
+- Le bouton « COMMENCER » du hero mène directement à « Ce qu’il faut préparer ».
+- Nettoyage des styles CSS devenus inutiles sur desktop et mobile.
