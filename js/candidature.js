@@ -18,6 +18,7 @@
   const confirmation = document.querySelector('#demo-confirmation');
   const confirmationMessage = document.querySelector('#confirmation-message');
   const confirmationHelp = document.querySelector('#confirmation-help');
+  const confirmationMaterialsLink = document.querySelector('#confirmation-materials-link');
   const applicationCard = document.querySelector('.application-card');
   const progress = document.querySelector('.form-progress');
   const turnstileBlock = document.querySelector('#turnstile-block');
@@ -444,7 +445,7 @@
       : 'ENVOYER MA CANDIDATURE <span aria-hidden="true">→</span>';
   };
 
-  const showSubmissionSuccess = (emailSent) => {
+  const showSubmissionSuccess = (emailSent, materialsAccessUrl = '') => {
     form.hidden = true;
     progress.hidden = true;
     confirmation.hidden = false;
@@ -455,6 +456,18 @@
     } else {
       confirmationMessage.textContent = 'Ton envoi a été enregistré, mais l’e-mail de confirmation n’a pas pu partir automatiquement.';
       confirmationHelp.innerHTML = 'Tu peux réessayer plus tard ou nous contacter directement à <a href="mailto:broadway@artsculturealsace.eu">broadway@artsculturealsace.eu</a>.';
+    }
+
+    if (confirmationMaterialsLink) {
+      const isValidAccessUrl = typeof materialsAccessUrl === 'string' &&
+        materialsAccessUrl.startsWith('https://broadway-api.artsculturealsace.eu/materials/access?token=');
+
+      if (isValidAccessUrl) {
+        confirmationMaterialsLink.href = materialsAccessUrl;
+        confirmationMaterialsLink.hidden = false;
+      } else {
+        confirmationMaterialsLink.hidden = true;
+      }
     }
 
     applicationCard.scrollIntoView({ behavior:'smooth', block:'start' });
@@ -504,7 +517,7 @@
         return;
       }
 
-      showSubmissionSuccess(Boolean(data.email_sent));
+      showSubmissionSuccess(Boolean(data.email_sent), data.materials_access_url || '');
     } catch (error) {
       console.error('Application submission error', error);
       resetTurnstile();

@@ -129,3 +129,10 @@ La section « Le projet » utilise une mosaïque de photographies réelles. La p
 
 ### V11-6
 - Sur la page des modalités, « Broadway à Strasbourg » est désormais entièrement insécable dans le texte du hero.
+
+## V11-7 — Matériaux sécurisés
+
+- raccordement des 65 ressources d’audition aux routes sécurisées du Worker / R2 ;
+- mise à jour du répertoire d’audition (alto et basse notamment) ;
+- bouton de l’écran de confirmation prêt à recevoir le lien d’accès personnel renvoyé par l’API ;
+- guide de préparation indiqué comme prochainement disponible.
