@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /auditions/materiaux/
+
+Sitemap: https://broadway.artsculturealsace.eu/sitemap.xml
