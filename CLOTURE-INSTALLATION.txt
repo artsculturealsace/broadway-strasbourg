@@ -1,0 +1,9 @@
+SITE PUBLIC — CLÔTURE DES CANDIDATURES
+
+Remplacer les fichiers du site GitHub Pages par le contenu de ce ZIP, sans supprimer les autres fichiers du dépôt.
+
+Modifiés : index.html, auditions/index.html, auditions/candidature/index.html, auditions/modalites/index.html, js/candidature.js.
+
+Les pages matériaux et guide sont conservées à l’identique. Ce ZIP ne modifie pas le Worker Cloudflare : /apply doit aussi être fermé côté serveur dans broadway-auditions-api. Le cookie et les routes d’accès et de téléchargement doivent rester actifs.
+
+Aucune modification de D1 ou de Broadway Admin.
