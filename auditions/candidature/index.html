@@ -2,13 +2,14 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8"/>
+<meta name="robots" content="noindex, nofollow, noarchive"/>
 <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
 <meta content="#17070a" name="theme-color"/>
-<meta content="Les candidatures aux auditions chant de Broadway à Strasbourg sont désormais clôturées." name="description"/>
-<meta content="Candidatures clôturées · Broadway à Strasbourg" property="og:title"/>
-<meta content="Les candidatures sont clôturées. Informations pour les candidats inscrits." property="og:description"/>
+<meta content="Formulaire de candidature aux auditions chant de Broadway à Strasbourg." name="description"/>
+<meta content="Candidature aux auditions · Broadway à Strasbourg" property="og:title"/>
+<meta content="Formulaire de candidature exceptionnelle, après échange avec l’équipe." property="og:description"/>
 <meta content="website" property="og:type"/>
-<title>Candidatures clôturées · Broadway à Strasbourg</title>
+<title>Candidature aux auditions · Broadway à Strasbourg</title>
 <link href="../../assets/icons/favicon.ico" rel="icon" sizes="any"/>
 <link href="../../assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="../../assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
@@ -47,16 +48,155 @@
 <section class="application-shell">
 <div class="application-container">
 <div class="application-card reveal">
-<p class="section-kicker">AUDITIONS CHANT · OCTOBRE 2026</p>
-<h1 style="font-family:'League Spartan',sans-serif;font-size:clamp(2rem,5vw,3.5rem);line-height:1.1;margin:20px 0">LES CANDIDATURES SONT CLÔTURÉES</h1>
-<p>Merci à toutes les personnes ayant candidaté à Broadway à Strasbourg ! Les inscriptions se sont terminées le 30 septembre 2026.</p>
-<p>Notre équipe prépare les auditions d’octobre. Si tu as déposé ta candidature, ta convocation te sera envoyée par e-mail avec la date, l’heure et le lieu de ton passage.</p>
-<p>Pour consulter et télécharger les fichiers de préparation, utilise d’abord le bouton d’accès personnel reçu dans ton mail de confirmation. Il active l’accès dans ton navigateur.</p>
-<div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:28px">
-<a class="button button-gold" href="../materiaux/">PRÉPARER MON AUDITION <span aria-hidden="true">→</span></a>
-<a class="button button-ghost" href="../">INFORMATIONS AUDITIONS</a>
+<div id="exceptional-intro" style="padding:24px clamp(24px,4vw,46px);border-bottom:1px solid rgba(255,255,255,.1)">
+<p class="form-step-kicker">CANDIDATURE EXCEPTIONNELLE</p>
+<p style="margin:8px 0 0;line-height:1.6">Ce formulaire est destiné aux personnes ayant échangé avec l’équipe après la clôture de l’appel à candidatures. Merci de le compléter au plus tard le <strong>18 octobre 2026 inclus</strong>, heure de Paris.</p>
 </div>
-<p style="margin-top:28px">Un problème avec ton mail de confirmation ? Contacte-nous à <a href="mailto:broadway@artsculturealsace.eu">broadway@artsculturealsace.eu</a>.</p>
+<div id="exceptional-closed" hidden role="status" style="padding:32px clamp(24px,4vw,46px)">
+<h2 style="font-size:clamp(1.6rem,4vw,2.3rem)">Candidatures clôturées</h2>
+<p style="line-height:1.6">Le dépôt des candidatures exceptionnelles est désormais fermé. Pour toute question, contacte-nous à <a href="mailto:broadway@artsculturealsace.eu">broadway@artsculturealsace.eu</a>.</p>
+</div>
+<div class="form-progress" aria-label="Progression du formulaire">
+<div class="progress-current" aria-live="polite"><span id="progress-count">Étape 1 sur 4</span><strong id="progress-name">Tes informations</strong></div>
+<div class="progress-track" aria-hidden="true"><span class="progress-fill"></span></div>
+<div class="progress-labels" aria-hidden="true">
+<span class="progress-item active">TES INFORMATIONS</span>
+<span class="progress-item">TON EXPÉRIENCE</span>
+<span class="progress-item">PRÉPARER TON AUDITION</span>
+<span class="progress-item">RÉCAPITULATIF</span>
+</div>
+</div>
+
+<form id="audition-application" novalidate>
+<input type="hidden" name="language" value="fr"/>
+<input type="hidden" name="rules_version" value="27-08-2026"/>
+
+<section class="form-step active" data-step="0" aria-labelledby="step-profile-title">
+<div class="form-step-heading">
+<h2 id="step-profile-title">TES INFORMATIONS</h2>
+<p>Ces informations nous permettront de traiter ta candidature et de te contacter pour la suite des auditions.</p>
+</div>
+<div class="form-grid two-cols">
+<label class="field"><span>Prénom <b>*</b></span><input autocomplete="given-name" name="first_name" required type="text"/></label>
+<label class="field"><span>Nom <b>*</b></span><input autocomplete="family-name" name="last_name" required type="text"/></label>
+<label class="field"><span>Date de naissance <b>*</b></span><input autocomplete="bday" id="birth-date" name="birth_date" required type="date"/><small>Les auditions sont ouvertes aux 16–35 ans inclus à la date de l’audition.</small></label>
+<label class="field"><span>Ville de résidence <b>*</b></span><input autocomplete="address-level2" name="city" placeholder="Strasbourg, Kehl, Colmar…" required type="text"/></label>
+<label class="field"><span>E-mail <b>*</b></span><input autocomplete="email" name="email" required type="email"/></label>
+<label class="field"><span>Numéro de téléphone <b>*</b></span><input autocomplete="tel" inputmode="tel" name="phone" placeholder="+33 6… / +49…" required type="tel"/></label>
+</div>
+</section>
+
+<section class="form-step" data-step="1" aria-labelledby="step-background-title" hidden>
+<div class="form-step-heading">
+<h2 id="step-background-title">TON EXPÉRIENCE</h2>
+<p>Aucun diplôme ou cursus particulier n’est exigé.</p>
+</div>
+<fieldset class="field-group" data-error-group="current_status">
+<legend>Quelle est ta situation actuelle ? <b>*</b></legend>
+<div class="choice-cards three">
+<label><input name="current_status" required type="radio" value="student"/><span><strong>ÉTUDIANT·E</strong></span></label>
+<label><input name="current_status" required type="radio" value="training"/><span><strong>EN FORMATION</strong></span></label>
+<label><input name="current_status" required type="radio" value="other"/><span><strong>AUTRE</strong></span></label>
+</div>
+</fieldset>
+<div class="conditional-block" id="training-details" hidden>
+<div class="form-grid two-cols">
+<label class="field"><span>Établissement / organisme <b>*</b></span><input name="institution" type="text"/></label>
+<label class="field"><span>Formation / cursus</span><input name="course" type="text"/></label>
+</div>
+</div>
+<div class="form-grid single-col">
+<label class="field"><span>Parle-nous brièvement de ton expérience du chant <b>*</b></span><textarea maxlength="1200" name="vocal_experience" required rows="5" placeholder="Cours de chant, conservatoire, chorale, groupe, scène, pratique autodidacte… ou simplement si tu débutes. Quelques lignes suffisent."></textarea></label>
+<label class="field"><span>Comment te situes-tu en lecture musicale ? <b>*</b></span>
+<select name="music_reading" required>
+<option value="">Choisir une réponse</option>
+<option value="easy">Je lis facilement une partition</option>
+<option value="some_difficulty">Je peux lire une partition avec quelques difficultés</option>
+<option value="little">Je lis peu la musique</option>
+<option value="none">Je ne lis pas la musique</option>
+</select>
+</label>
+<label class="field"><span>Souhaites-tu ajouter quelque chose à ta candidature ?</span><textarea maxlength="1600" name="additional_info" rows="4" placeholder="Tu peux préciser ton parcours, ce qui t’amène à candidater ou toute information que tu souhaites nous transmettre."></textarea></label>
+<label class="field"><span>Comment as-tu découvert les auditions ?</span>
+<select id="discovery-source" name="discovery_source">
+<option value="">Choisir une réponse</option>
+<option value="instagram">Instagram</option>
+<option value="facebook">Facebook</option>
+<option value="tiktok">TikTok</option>
+<option value="poster">Affiche</option>
+<option value="university">Université / établissement</option>
+<option value="conservatory">Conservatoire / école de musique</option>
+<option value="student_network">Association / réseau étudiant</option>
+<option value="word_of_mouth">Bouche-à-oreille</option>
+<option value="other">Autre</option>
+</select>
+</label>
+<div class="conditional-block" id="discovery-other-wrap" hidden><label class="field"><span>Précise, si tu le souhaites</span><input name="discovery_other" type="text"/></label></div>
+</div>
+</section>
+
+<section class="form-step" data-step="2" aria-labelledby="step-voice-title" hidden>
+<div class="form-step-heading">
+<h2 id="step-voice-title">PRÉPARER TON AUDITION</h2>
+<p>Tu retrouveras les matériaux de préparation à l’issue de ton inscription. Choisis ton type de voix ci-dessous. Si tu ne le connais pas encore, sélectionne « Je ne sais pas encore » : ce n’est pas grave, tout sera expliqué dans le guide de préparation.</p>
+</div>
+<div class="form-grid single-col voice-choice-grid">
+<label class="field"><span>Quel est ton type de voix ? <b>*</b></span>
+<select id="voice-type" name="voice_type" required>
+<option value="">Choisir un type de voix</option>
+<option value="soprano">Soprano</option>
+<option value="mezzo">Mezzo-soprano</option>
+<option value="alto">Alto</option>
+<option value="tenor">Ténor</option>
+<option value="baritone">Baryton</option>
+<option value="bass">Basse</option>
+<option value="unknown">Je ne sais pas encore</option>
+</select>
+</label>
+</div>
+</section>
+
+<section class="form-step" data-step="3" aria-labelledby="step-review-title" hidden>
+<div class="form-step-heading form-step-heading-compact">
+<h2 id="step-review-title">RÉCAPITULATIF</h2>
+<p>Vérifie tes informations avant d’envoyer ta candidature.</p>
+</div>
+<div class="application-review" id="application-review" aria-live="polite"></div>
+<div class="legal-consents">
+<div class="check-consent-group" data-error-group="documents_accepted">
+<label class="check-line">
+<input id="accept-documents" name="documents_accepted" required type="checkbox"/>
+<span>J’ai pris connaissance du <a href="../../documents/REGLEMENT_AUDITIONS_BAS_27-08-2026.pdf" target="_blank" rel="noopener">Règlement des auditions</a> et de la <a href="../../confidentialite/" target="_blank" rel="noopener">Politique de confidentialité</a>, et j’en accepte les dispositions. <b>*</b></span>
+</label>
+</div>
+<fieldset class="recording-consent" data-error-group="recording_consent">
+<legend>Autorises-tu l’enregistrement audio et/ou vidéo de ton audition à des fins exclusivement internes à l’équipe artistique ? <b>*</b></legend>
+<div class="choice-cards two compact">
+<label><input name="recording_consent" required type="radio" value="yes"/><span><strong>OUI</strong></span></label>
+<label><input name="recording_consent" required type="radio" value="no"/><span><strong>NON</strong></span></label>
+</div>
+<p>Le refus n’a aucune incidence sur l’examen de ta candidature.</p>
+</fieldset>
+<div class="turnstile-block" id="turnstile-block" data-error-group="turnstile">
+<div id="turnstile-widget" aria-label="Vérification de sécurité"></div>
+</div>
+</div>
+</section>
+
+<div class="form-errors" id="form-errors" role="alert" aria-live="assertive"></div>
+<div class="form-navigation">
+<button class="form-back-link form-prev" type="button" hidden><span aria-hidden="true">←</span> RETOUR</button>
+<button class="button button-gold form-next" type="button">CONTINUER <span aria-hidden="true">→</span></button>
+<button class="button button-gold form-submit" type="submit" hidden>ENVOYER MA CANDIDATURE <span aria-hidden="true">→</span></button>
+</div>
+</form>
+
+<div class="application-demo-confirmation" id="demo-confirmation" hidden>
+<h2>MERCI !</h2>
+<p id="confirmation-message">Un e-mail de confirmation va t’être envoyé à l’adresse indiquée dans le formulaire.</p>
+<p class="confirmation-help" id="confirmation-help">Si tu ne le reçois pas dans les prochaines minutes, pense d’abord à vérifier tes courriers indésirables. S’il n’y est pas non plus, contacte-nous à <a href="mailto:broadway@artsculturealsace.eu">broadway@artsculturealsace.eu</a>.</p>
+<a class="button button-gold" href="../materiaux/" id="confirmation-materials-link">ACCÉDER AUX MATÉRIAUX DE PRÉPARATION</a>
+</div>
 </div>
 </div>
 </section>
@@ -92,7 +232,7 @@
 </div>
 </footer>
 <script src="../../js/main.js"></script>
-
-
+<script async defer src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"></script>
+<script src="../../js/candidature.js?v=exceptionnel-20261002"></script>
 </body>
 </html>
